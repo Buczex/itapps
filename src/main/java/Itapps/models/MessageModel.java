@@ -7,18 +7,17 @@ import javax.persistence.*;
 public class MessageModel {
 
     @Id
-    @Column(name = "MessegeID")
-    @GeneratedValue
+    @Column(name = "MessageID")
+    @GeneratedValue(strategy = GenerationType.AUTO )
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name = "SenderID", referencedColumnName = "UserID")
+    @JoinColumn(name = "Sender", referencedColumnName = "UserID")
     private UserModel Sender;
 
     @ManyToOne
-    @JoinColumn(name = "ReceiverID", referencedColumnName = "UserID")
+    @JoinColumn(name = "Receiver", referencedColumnName = "UserID")
     private UserModel Receiver;
-
 
     @Column(name = "Message")
     private String Message;
@@ -37,4 +36,7 @@ public class MessageModel {
 
     public long getMessageDate(){return Date;}
     public void setMessageDate(long Date){this.Date = Date;}
+
+    public void setMessage(String message){Message = message;}
+    public String getMessage(){return Message;}
 }

@@ -1,26 +1,22 @@
 package Itapps.models;
 
- import javax.persistence.Column;
- import javax.persistence.Entity;
- import javax.persistence.Id;
- import javax.persistence.Table;
- import javax.persistence.OneToMany;
- import javax.persistence.ManyToOne;
+ import javax.persistence.*;
 
- @Entity
+@Entity
  @Table(name = "Visit")
 public class VisitModel {
     @Id
+    @GeneratedValue
      private int Id;
 
     @Column(name = "Time")
      private long Time;
 
-     @OneToMany(mappedBy = "User")
-     private UserModel User;
+     //@OneToMany(mappedBy = "User")
+     //private UserModel User;
 
-     @OneToMany(mappedBy = "Building_id")
-     private BuildingsModel Building_id;
+     //@OneToMany(mappedBy = "Building_id")
+     //private BuildingsModel Building_id;
 
 
      public int getVisitId(){return Id;}
@@ -29,11 +25,11 @@ public class VisitModel {
       public long getVisitTime(){return Time;}
      public void setVisitId(long Time){this.Time = Time;}
 
-      public UserModel getVisitUser(){return User;}
-     public void setVisitUser(UserModel User){this.User = User;}
+      //public UserModel getVisitUser(){return User;}
+     //public void setVisitUser(UserModel User){this.User = User;}
 
-      public BuildingsModel getVisitBuilding_id(){return Building_id;}
-     public void setVisitBuilding_id(BuildingsModel Building_id){this.Building_id = Building_id;}
+      //public BuildingsModel getVisitBuilding_id(){return Building_id;}
+     //public void setVisitBuilding_id(BuildingsModel Building_id){this.Building_id = Building_id;}
 
 
 }

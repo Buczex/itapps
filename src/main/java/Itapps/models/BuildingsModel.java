@@ -4,12 +4,16 @@ package Itapps.models;
   import javax.persistence.Entity;
   import javax.persistence.Id;
   import javax.persistence.Table;
+  import javax.persistence.GeneratedValue;
+  import javax.persistence.GenerationType;
+
 
 @Entity
 @Table(name = "Buildings")
 public class BuildingsModel {
 
     @Id
+    @GeneratedValue
     private int Id;
 
     @Column(name = "X")

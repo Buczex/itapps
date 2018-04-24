@@ -9,7 +9,7 @@ public class MessageModel {
     @Id
     @Column(name = "MessageID")
     @GeneratedValue(strategy = GenerationType.AUTO )
-    private int Id;
+    private long Id;
 
     @ManyToOne
     @JoinColumn(name = "Sender", referencedColumnName = "UserID")
@@ -25,8 +25,8 @@ public class MessageModel {
     @Column(name = "Date")
     private long Date;
 
-    public int getMessageId(){return Id;}
-    public void setMessageId(int id){this.Id = Id;}
+    public long getMessageId(){return Id;}
+    public void setMessageId(long id){this.Id = Id;}
 
     public UserModel getMessageSender(){return Sender;}
     public void setMessageSender(UserModel Sender){this.Sender = Sender;}

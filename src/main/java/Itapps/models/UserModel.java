@@ -21,7 +21,7 @@ public class UserModel {
     private String Name;
 
     public long getUserId(){return Id;}
-    public void setUserId(int id){this.Id = Id;}
+    public void setUserId(long id){this.Id = Id;}
 
     public String getUserPassword(){return Password;}
     public void setUserPassword(String Password){this.Password = Password;}

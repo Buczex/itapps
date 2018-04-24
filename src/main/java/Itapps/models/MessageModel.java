@@ -29,11 +29,11 @@ public class MessageModel {
     public int getMessageId(){return Id;}
     public void setMessageId(int id){this.Id = Id;}
 
-    //public UserModel getMessageSender(){return Sender;}
-    //public void setMessageSender(UserModel Sender){this.Sender = Sender;}
+    public UserModel getMessageSender(){return Sender;}
+    public void setMessageSender(UserModel Sender){this.Sender = Sender;}
 
-    //public UserModel getMessageReceiver(){return Receiver;}
-    //public void setMessageReceiver(UserModel Receiver){this.Receiver = Receiver;}
+    public UserModel getMessageReceiver(){return Receiver;}
+    public void setMessageReceiver(UserModel Receiver){this.Receiver = Receiver;}
 
     public long getMessageDate(){return Date;}
     public void setMessageDate(long Date){this.Date = Date;}

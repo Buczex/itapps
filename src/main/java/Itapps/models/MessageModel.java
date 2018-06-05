@@ -13,11 +13,11 @@ public class MessageModel {
 
     @ManyToOne
     @JoinColumn(name = "Sender", referencedColumnName = "UserID")
-    private UserModel Sender;
+    private int Sender;
 
     @ManyToOne
     @JoinColumn(name = "Receiver", referencedColumnName = "UserID")
-    private UserModel Receiver;
+    private int Receiver;
 
     @Column(name = "Message")
     private String Message;
@@ -28,11 +28,11 @@ public class MessageModel {
     public long getMessageId(){return Id;}
     public void setMessageId(long id){this.Id = Id;}
 
-    public UserModel getMessageSender(){return Sender;}
-    public void setMessageSender(UserModel Sender){this.Sender = Sender;}
+    public int getMessageSender(){return Sender;}
+    public void setMessageSender(int Sender){this.Sender = Sender;}
 
-    public UserModel getMessageReceiver(){return Receiver;}
-    public void setMessageReceiver(UserModel Receiver){this.Receiver = Receiver;}
+    public int getMessageReceiver(){return Receiver;}
+    public void setMessageReceiver(int Receiver){this.Receiver = Receiver;}
 
     public long getMessageDate(){return Date;}
     public void setMessageDate(long Date){this.Date = Date;}

@@ -32,6 +32,8 @@ public class LectureModel {
     @Column(name="Week")
     private String Week;
 
+    @Column(name="User")
+    private int User;
 
     public int getLectureId(){return Id;}
     public void setLectureId(int id){this.Id = Id;}
@@ -51,5 +53,6 @@ public class LectureModel {
     public String getLectureWeek(){return Week;}
     public void setLectureWeek(String Week){this.Week = Week;}
 
-
+    public int getLectureUser(){return User;}
+    public void setLectureUser(int User){this.User = User;}
 }

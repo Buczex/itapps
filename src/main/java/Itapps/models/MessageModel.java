@@ -11,12 +11,14 @@ public class MessageModel {
     @GeneratedValue(strategy = GenerationType.AUTO )
     private long Id;
 
-    @ManyToOne
-    @JoinColumn(name = "Sender", referencedColumnName = "UserID")
+    //@ManyToOne
+    //@JoinColumn(name = "Sender", referencedColumnName = "UserID")
+    @Column(name = "Sender")
     private int Sender;
 
-    @ManyToOne
-    @JoinColumn(name = "Receiver", referencedColumnName = "UserID")
+    //@ManyToOne
+    //@JoinColumn(name = "Receiver", referencedColumnName = "UserID")
+    @Column(name = "Receiver")
     private int Receiver;
 
     @Column(name = "Message")
